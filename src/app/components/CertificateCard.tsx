@@ -8,8 +8,8 @@ export default function CertificateCard({
   certificate: certificate;
 }) {
   return (
-    <div className="flex p-4 h-full bg-white border border-gray-200 rounded-lg shadow ">
-      <div className="w-4/5 lg:w-full h-full flex flex-col text-black">
+    <div className="flex flex-col gap-2 sm:flex-row p-4 h-full bg-white border border-gray-200 rounded-lg shadow ">
+      <div className="w-4/5 lg:w-full h-full flex flex-col gap-2">
         <div>Name : {certificate.title}</div>
         <div>Finished At : {new Date(certificate.finishAt).toDateString()}</div>
         <div>From : {certificate.Organization}</div>
@@ -23,7 +23,7 @@ export default function CertificateCard({
           })}
         </div>
       </div>
-      <div className="flex justify-center items-center w-1/12 ">
+      <div className="flex justify-center items-center  ">
         <Link href={certificate.url}>
           <div className="border rounded-lg flex items-center gap-2 p-2 btn-primary">
             <IoLink size={40} />

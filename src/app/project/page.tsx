@@ -1,4 +1,3 @@
-"use server";
 export default async function Project() {
   const data = await fetch(
     process.env.NEXT_PUBLIC_BACKEND_URL + "certificate",

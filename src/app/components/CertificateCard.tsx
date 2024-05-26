@@ -9,7 +9,7 @@ export default function CertificateCard({
 }) {
   return (
     <div className="flex p-4 h-full bg-white border border-gray-200 rounded-lg shadow ">
-      <div className="w-4/5 lg:w-full h-full flex flex-col">
+      <div className="w-4/5 lg:w-full h-full flex flex-col text-black">
         <div>Name : {certificate.title}</div>
         <div>Finished At : {new Date(certificate.finishAt).toDateString()}</div>
         <div>From : {certificate.Organization}</div>

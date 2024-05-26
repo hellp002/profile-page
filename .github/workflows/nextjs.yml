@@ -77,7 +77,7 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: generate prisma
-        run: ${{ steps.detect-package-manager.outputs.manager }} prisma generate
+        run: npx prisma generate
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
 

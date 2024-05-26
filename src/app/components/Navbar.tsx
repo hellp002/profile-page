@@ -10,7 +10,7 @@ const linkObj = [
 
 export function Navbar() {
   return (
-    <nav className="flex w-full bg-indigo-600 bg-opacity-70 sticky text-white">
+    <nav className="flex justify-between w-full bg-indigo-600 bg-opacity-70 sticky text-white">
       <ul className="flex items-center w-3/5 md:w-2/5 lg:w-1/5 h-full">
         {linkObj.map((obj) => {
           return (
@@ -20,6 +20,9 @@ export function Navbar() {
           );
         })}
       </ul>
+      <div className="flex justify-center items-center rounded-lg bg-black m-4 px-2 border-black border-4">
+        <Link href={"https://github.com/hellp002"}>My Github</Link>
+      </div>
     </nav>
   );
 }

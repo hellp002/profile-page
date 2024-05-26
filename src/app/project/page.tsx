@@ -5,8 +5,30 @@ export default async function Project() {
   });
   if (data.status == 200) {
     const jsonData = await data.json();
-    return <div>{JSON.stringify(jsonData)}</div>;
+    return (
+      <div>
+        {JSON.stringify(jsonData)}
+        <button
+          onClick={() => {
+            console.log(process.env.BACKEND_URL);
+          }}
+        >
+          Test
+        </button>
+      </div>
+    );
   } else {
-    return <div>Failed</div>;
+    return (
+      <div>
+        Failed
+        <button
+          onClick={() => {
+            console.log(process.env.BACKEND_URL);
+          }}
+        >
+          Test
+        </button>
+      </div>
+    );
   }
 }

@@ -63,7 +63,7 @@ jobs:
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
       - name: export env db
-        run: export DATABASE_URL=${{secrets.DATABASE_URL}}
+        run: export DATABASE_URL=${{ secrets.DATABASE_URL }}
 
       - name: Restore cache
         uses: actions/cache@v4
@@ -81,7 +81,7 @@ jobs:
         run: npx prisma generate
       - name: Build with Next.js
         env:
-          DATABASE_URL: ${{secrets.DATABASE_URL}}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
 
       - name: Upload artifact

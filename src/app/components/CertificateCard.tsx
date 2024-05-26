@@ -14,9 +14,11 @@ export default function CertificateCard({
         <div>Finished At : {new Date(certificate.finishAt).toDateString()}</div>
         <div>From : {certificate.Organization}</div>
         <div className="flex-col flex md:flex-row gap-2 flex-wrap">
-          {certificate.Skills.map((skill) => {
+          {certificate.Skills.map((skill, idx) => {
             return (
-              <div className="badge badge-outline badge-primary ">{skill}</div>
+              <div key={idx} className="badge badge-outline badge-primary ">
+                {skill}
+              </div>
             );
           })}
         </div>

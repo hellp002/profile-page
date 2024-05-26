@@ -1,3 +1,6 @@
+import { certificate } from "@prisma/client";
+import CertificateCard from "../components/CertificateCard";
+
 export default async function Project() {
   const data = await fetch(
     process.env.NEXT_PUBLIC_BACKEND_URL + "certificate",
@@ -6,8 +9,8 @@ export default async function Project() {
     }
   );
   if (data.status == 200) {
-    const jsonData = await data.json();
-    return <div>{JSON.stringify(jsonData)}</div>;
+    const jsonData: certificate[] = await data.json();
+    return <div className="">No</div>;
   } else {
     return <div>Failed</div>;
   }

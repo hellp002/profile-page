@@ -83,7 +83,7 @@ jobs:
       - name: Build with Next.js
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          BACKEND_URL: ${{ env.BACKEND_URL}}
+          BACKEND_URL: ${{ env.BACKEND_URL }}
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
 
       - name: Upload artifact

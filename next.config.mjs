@@ -1,13 +1,4 @@
 /** @type {import('next').NextConfig} */
-
-const isProd = process.env.NODE_ENV === "production";
-const nextConfig = {
-  basePath: isProd ? "/profile-page" : "",
-  assetPrefix: isProd ? "/profile-page/" : "",
-  images: {
-    loader: "imgix",
-    path: isProd ? "/profile-page/" : "",
-  },
-};
+const nextConfig = {};
 
 export default nextConfig;

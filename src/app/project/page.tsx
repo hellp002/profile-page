@@ -1,8 +1,11 @@
 "use client";
 export default async function Project() {
-  const data = await fetch(process.env.BACKEND_URL + "certificate", {
-    method: "GET",
-  });
+  const data = await fetch(
+    process.env.NEXT_PUBLIC_BACKEND_URL + "certificate",
+    {
+      method: "GET",
+    }
+  );
   if (data.status == 200) {
     const jsonData = await data.json();
     return (

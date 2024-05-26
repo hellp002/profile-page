@@ -12,9 +12,17 @@ model project {
   message String
 }
 
+model certificate {
+  id      String @id @default(auto()) @map("_id") @db.ObjectId
+  title   String
+  Skills  String[]
+  Organization String
+  url String
+  finishAt DateTime
+}
+
 model User {
   id      String @id @default(auto()) @map("_id") @db.ObjectId
   username String 
   password String
-  
 }

@@ -64,6 +64,9 @@ jobs:
           static_site_generator: next
       - name: export env db
         run: export DATABASE_URL=${{secrets.DATABASE_URL}}
+
+      - name: test env
+        run: printenv DATABASE_URL
       - name: Restore cache
         uses: actions/cache@v4
         with:

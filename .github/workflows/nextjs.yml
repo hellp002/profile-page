@@ -65,6 +65,8 @@ jobs:
           static_site_generator: next
       - name: export env db
         run: export DATABASE_URL=${{ secrets.DATABASE_URL }}
+      - name: add api path
+        run: export BACKEND_URL=${{ env.BACKEND_URL }}
 
       - name: Restore cache
         uses: actions/cache@v4

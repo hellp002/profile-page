@@ -10,14 +10,12 @@ const CreateSchema = z.object({
 
 type Creator = z.infer<typeof CreateSchema>;
 
-/*
-
 export async function GET(req: NextRequest) {
   const res = await db.project.findMany();
   return Response.json(res);
 }
-*/
 
+/*
 export async function POST(req: NextRequest) {
   const data = await req.json();
   const parseData = CreateSchema.safeParse(data);
@@ -29,3 +27,4 @@ export async function POST(req: NextRequest) {
 
   return Response.json({ message: "success", data: readData });
 }
+*/

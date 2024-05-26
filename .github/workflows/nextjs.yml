@@ -80,6 +80,8 @@ jobs:
       - name: generate prisma
         run: npx prisma generate
       - name: Build with Next.js
+        env:
+          DATABASE_URL: ${{secrets.DATABASE_URL}}
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
 
       - name: Upload artifact

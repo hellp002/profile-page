@@ -10,7 +10,7 @@ export default async function Project() {
         {JSON.stringify(jsonData)}
         <button
           onClick={() => {
-            console.log(process.env.BACKEND_URL);
+            alert(process.env.BACKEND_URL);
           }}
         >
           Test
@@ -23,7 +23,7 @@ export default async function Project() {
         Failed
         <button
           onClick={() => {
-            console.log(process.env.BACKEND_URL);
+            alert(process.env.BACKEND_URL);
           }}
         >
           Test

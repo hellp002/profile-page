@@ -1,4 +1,4 @@
-"use client";
+"use server";
 export default async function Project() {
   const data = await fetch(
     process.env.NEXT_PUBLIC_BACKEND_URL + "certificate",
@@ -8,30 +8,8 @@ export default async function Project() {
   );
   if (data.status == 200) {
     const jsonData = await data.json();
-    return (
-      <div>
-        {JSON.stringify(jsonData)}
-        <button
-          onClick={() => {
-            alert(process.env.NEXT_PUBLIC_BACKEND_URL);
-          }}
-        >
-          Test
-        </button>
-      </div>
-    );
+    return <div>{JSON.stringify(jsonData)}</div>;
   } else {
-    return (
-      <div>
-        Failed
-        <button
-          onClick={() => {
-            alert(process.env.NEXT_PUBLIC_BACKEND_URL);
-          }}
-        >
-          Test
-        </button>
-      </div>
-    );
+    return <div>Failed</div>;
   }
 }

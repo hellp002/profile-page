@@ -2,13 +2,13 @@ import db from "@/app/lib/db";
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 
-export const CreateSchema = z.object({
+const CreateSchema = z.object({
   from: z.string().min(1).email(),
   to: z.string().min(1).email(),
   subject: z.string().min(1),
 });
 
-export type Creator = z.infer<typeof CreateSchema>;
+type Creator = z.infer<typeof CreateSchema>;
 
 /*
 

@@ -14,7 +14,7 @@ export function Navbar() {
       <ul className="flex items-center w-3/5 md:w-2/5 lg:w-1/5 h-full">
         {linkObj.map((obj) => {
           return (
-            <li className="hover:bg-red-400 p-6 h-full">
+            <li key={obj.href} className="hover:bg-red-400 p-6 h-full">
               <Link href={obj.href}>{obj.text}</Link>
             </li>
           );

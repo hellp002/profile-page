@@ -13,7 +13,7 @@ export default async function Project() {
     return (
       <div className="flex flex-col gap-4 m-4">
         {jsonData.map((data) => {
-          return <CertificateCard certificate={data} />;
+          return <CertificateCard key={data.id} certificate={data} />;
         })}
       </div>
     );

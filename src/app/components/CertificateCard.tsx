@@ -9,11 +9,11 @@ export default function CertificateCard({
 }) {
   return (
     <div className="flex flex-col gap-2 sm:flex-row p-4 h-full bg-white border border-gray-200 rounded-lg shadow ">
-      <div className="w-4/5 lg:w-full h-full flex flex-col gap-2">
+      <div className="w-full h-full flex flex-col gap-2">
         <div>Name : {certificate.title}</div>
         <div>Finished At : {new Date(certificate.finishAt).toDateString()}</div>
         <div>From : {certificate.Organization}</div>
-        <div className="flex-col flex md:flex-row gap-2 flex-wrap items-center">
+        <div className="flex-col flex md:flex-row gap-2 flex-wrap">
           Skills :{" "}
           {certificate.Skills.map((skill, idx) => {
             return (
